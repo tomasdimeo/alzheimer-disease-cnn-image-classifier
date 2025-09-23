@@ -149,6 +149,7 @@ model = from_pretrained_keras("tdimeo/xception-fine-tuned")
 ├── alzheimer-disease-image-classifier.ipynb # The main Jupyter Notebook with all experiments
 ├── images # Images
 ├── demo # Demo
+├── requirements.txt # Requirements
 ├── LICENCE # Licence
 └── README.md # You are here
 ```
