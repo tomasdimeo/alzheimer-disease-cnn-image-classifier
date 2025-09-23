@@ -74,9 +74,16 @@ Several models were implemented to compare their performance on this task. Each 
 5.  **Transfer Learning with EfficientNetV2S (Feature Extraction & Fine-Tuning):**
     - Implements a similar transfer learning pipeline using the **EfficientNetV2S** model, known for its balance of performance and computational efficiency.
     - The same two-stage process of feature extraction followed by fine-tuning is applied.
+
+    Classification Head
   
     ![Transfer Learning with EfficientNet Loss](images/efficientnet_ft_loss.png)
     ![Transfer Learning with EfficientNet Accuracy](images/efficientnet_ft_acc.png)
+
+    Fine-Tuning
+
+    ![Transfer Learning with EfficientNet Loss 2](images/efficientnet_ft_loss_2.png)
+    ![Transfer Learning with EfficientNet Accuracy 2](images/efficientnet_ft_acc_2.png)
 
 ## Results
 
@@ -98,7 +105,7 @@ The fine-tuned Xception and EfficientNetV2S models both achieved an outstanding 
 
 ![Model Demo](demo/demo-alzheimer.gif)
 
-Try it out!
+Try it out 👇
 
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://tdimeo-alzheimer-image-classifier.hf.space)
 
@@ -130,17 +137,31 @@ To replicate this project, follow the steps below.
 Efficient Net V2S Fine-Tuned
 
 ```
-from huggingface_hub import from_pretrained_keras
+from huggingface_hub import hf_hub_download
+import tensorflow as tf
 
-model = from_pretrained_keras("tdimeo/efficientnetv2s-fine-tuned.keras")
+model_path = hf_hub_download(
+    repo_id="tdimeo/efficientnetv2s-fine-tuned",
+    filename="efficientnetv2s_fine_tuned.keras",
+)
+
+model = tf.keras.models.load_model(model_path)
+model.summary()
 ```
 
 Xception Fine-Tuned
 
 ```
-from huggingface_hub import from_pretrained_keras
+from huggingface_hub import hf_hub_download
+import tensorflow as tf
 
-model = from_pretrained_keras("tdimeo/xception-fine-tuned")
+model_path = hf_hub_download(
+    repo_id="tdimeo/xception-fine-tuned",
+    filename="xception_fine_tuned.keras",
+)
+
+model = tf.keras.models.load_model(model_path)
+model.summary()
 ```
 
 ## File Structure
