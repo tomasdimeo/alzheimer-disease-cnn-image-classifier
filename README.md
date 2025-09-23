@@ -17,7 +17,7 @@ This repository contains a Jupyter Notebook that explores various deep learning 
 - [Results](#results)
 - [Demo](#demo)
 - [Installation & Usage](#installation--usage)
-- [Download the Models](#download-models)
+- [Download the Models](#download-the-models)
 - [File Structure](#file-structure)
 - [Contributing](#contributing)
 
@@ -145,12 +145,13 @@ model = from_pretrained_keras("tdimeo/xception-fine-tuned")
 
 ## File Structure
 
-.
+```
 ├── alzheimer-disease-image-classifier.ipynb # The main Jupyter Notebook with all experiments
 ├── images # Images
 ├── demo # Demo
 ├── LICENCE # Licence
 └── README.md # You are here
+```
 
 ## Contributing
 Contributions are welcome! If you have any suggestions for improvement, feel free to create a pull request or open an issue.
