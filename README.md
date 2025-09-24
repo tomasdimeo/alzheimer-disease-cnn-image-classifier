@@ -10,6 +10,18 @@ This repository contains a Jupyter Notebook that explores various deep learning 
 
 ---
 
+## File Structure
+
+```
+├── alzheimer-disease-image-classifier.ipynb # The main Jupyter Notebook with all experiments
+├── images # Images
+├── demo # Demo
+├── requirements.txt # Requirements
+├── LICENCE # Licence
+└── README.md # You are here
+```
+---
+
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Dataset](#dataset)
@@ -20,6 +32,7 @@ This repository contains a Jupyter Notebook that explores various deep learning 
 - [Download the Models](#download-the-models)
 - [File Structure](#file-structure)
 - [Contributing](#contributing)
+- [Author](#author)
 
 ## Project Overview
 
@@ -164,16 +177,11 @@ model = tf.keras.models.load_model(model_path)
 model.summary()
 ```
 
-## File Structure
-
-```
-├── alzheimer-disease-image-classifier.ipynb # The main Jupyter Notebook with all experiments
-├── images # Images
-├── demo # Demo
-├── requirements.txt # Requirements
-├── LICENCE # Licence
-└── README.md # You are here
-```
-
 ## Contributing
 Contributions are welcome! If you have any suggestions for improvement, feel free to create a pull request or open an issue.
+
+## Author
+
+*   **Tomás Di Meo**
+*   **LinkedIn**: `https://www.linkedin.com/in/tom%C3%A1s-di-meo-b2689a139/`
+*   **GitHub**: `https://github.com/tomasdimeo`
